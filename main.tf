@@ -5,6 +5,12 @@ resource "vra_zone" "this" {
   folder      = var.folder
 
   placement_policy = var.placement_policy
+
+  compute_ids = length(var.compute_ids) > 0 ? var.compute_ids : null
+  custom_properties = (
+    length(var.custom_properties) > 0 ? var.custom_properties : null
+  )
+
   dynamic "tags_to_match" {
     for_each = var.tags_to_match
     content {
