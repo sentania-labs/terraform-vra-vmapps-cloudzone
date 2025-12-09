@@ -21,8 +21,8 @@ module "cloud_zones" {
   placement_policy = var.placement_policy
   folder           = var.folder
 
-  tags_to_match    = var.tags_to_match
-  capability_tags  = var.capability_tags
-  compute_ids      = var.compute_ids
+  tags_to_match     = var.tags_to_match
+  capability_tags   = var.capability_tags
+  compute_ids       = var.compute_ids
   custom_properties = var.custom_properties
 }
