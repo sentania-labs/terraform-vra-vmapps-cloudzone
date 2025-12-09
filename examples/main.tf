@@ -1,11 +1,3 @@
-terraform {
-  required_providers {
-    vra = {
-      source = "vmware/vra"
-    }
-  }
-}
-
 data "vra_region" "all" {}
 
 module "cloud_zones" {
